@@ -95,18 +95,18 @@
 
 
 
-  <meta name="description" content="Git是一个版本管理的工具， 他可以在">
+  <meta name="description" content="Git是一个版本管理的工具， 他可以在 Git与svn对比svnsvn是集中式版本控制系统， 版本库是集中放在中央服务器， 而干活的时候， 用的都是自己的电脑， 所以首先要从中央服务器那里得到最新的版本， 然后干活， 干完后， 需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作， 如果在局域网还可以， 带宽够大， 速度够快， 如果在互联网下， 如果网速慢的话， 就郁闷了。 集">
 <meta name="keywords" content="git,版本管理,实用小工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git">
 <meta property="og:url" content="https://showlemon.github.io/2019/07/21/Git/index.html">
 <meta property="og:site_name" content="小玉の小窝(๑‾ ꇴ ‾๑)">
-<meta property="og:description" content="Git是一个版本管理的工具， 他可以在">
+<meta property="og:description" content="Git是一个版本管理的工具， 他可以在 Git与svn对比svnsvn是集中式版本控制系统， 版本库是集中放在中央服务器， 而干活的时候， 用的都是自己的电脑， 所以首先要从中央服务器那里得到最新的版本， 然后干活， 干完后， 需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作， 如果在局域网还可以， 带宽够大， 速度够快， 如果在互联网下， 如果网速慢的话， 就郁闷了。 集">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T06:43:17.920Z">
+<meta property="og:updated_time" content="2019-07-25T02:16:49.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="Git是一个版本管理的工具， 他可以在">
+<meta name="twitter:description" content="Git是一个版本管理的工具， 他可以在 Git与svn对比svnsvn是集中式版本控制系统， 版本库是集中放在中央服务器， 而干活的时候， 用的都是自己的电脑， 所以首先要从中央服务器那里得到最新的版本， 然后干活， 干完后， 需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作， 如果在局域网还可以， 带宽够大， 速度够快， 如果在互联网下， 如果网速慢的话， 就郁闷了。 集">
 
 
 
@@ -375,13 +375,23 @@
                 
               
 
-              <time title="创建时间：2019-07-21 12:31:28 / 修改时间：14:43:17" itemprop="dateCreated datePublished" datetime="2019-07-21T12:31:28+08:00">2019-07-21</time>
+              <time title="创建时间：2019-07-21 12:31:28" itemprop="dateCreated datePublished" datetime="2019-07-21T12:31:28+08:00">2019-07-21</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-25 10:16:49" itemprop="dateModified" datetime="2019-07-25T10:16:49+08:00">2019-07-25</time>
+              </span>
             
           
 
@@ -428,6 +438,110 @@
 
       
         <p>Git是一个版本管理的工具， 他可以在</p>
+<h3 id="Git与svn对比"><a href="#Git与svn对比" class="headerlink" title="Git与svn对比"></a>Git与svn对比</h3><h4 id="svn"><a href="#svn" class="headerlink" title="svn"></a>svn</h4><p>svn是集中式版本控制系统， 版本库是集中放在中央服务器， 而干活的时候， 用的都是自己的电脑， 所以首先要从中央服务器那里得到最新的版本， 然后干活， 干完后， 需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作， 如果在局域网还可以， 带宽够大， 速度够快， 如果在互联网下， 如果网速慢的话， 就郁闷了。</p>
+<p>集中管理方式在一定程度看到其他开发人员在什么， 而管理员也可以很轻松掌握每个人的开发权限</p>
+<p>但是相较于其优点而言， 集中式版本控制工具缺点很明显</p>
+<ul>
+<li>服务器单点故障</li>
+<li>容错性差</li>
+</ul>
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>Git是分布式版本控制系统， 那么它就没有中央服务器的， 每个人的电脑上就是一个完整的版本库， 这样， 工作的时候就不需要联网了， 因为版本都是在自己的电脑上， 既然每个人的电脑上都有一个完整的版本库， 那多个人如何协作呢？比如说自己在电脑上改了文件A， 其他人也在电脑上改了文件A， 这时， 你们两之间只需把各自的修改推送给对方， 就可以互相看到对方的修改了</p>
+<h3 id="git工作流程"><a href="#git工作流程" class="headerlink" title="git工作流程"></a>git工作流程</h3><ol>
+<li>从远程仓库中克隆Git资源作为本地仓库</li>
+<li>从本地仓库中cheekout代码然后进行代码修改</li>
+<li>在提交前先将代码提交到暂存区</li>
+<li>提交修改， 提交到本地仓库， 本地仓库中保存修改的各个历史版本</li>
+<li>在修改完成后， 需要和团队成员共享代码时， 可以将代码push到远程仓库</li>
+</ol>
+<h3 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h3><p>默认选项无需更改</p>
+<p>推荐安装到默认的安装路径</p>
+<p>git bash here 会打开一个命令行窗口， 里面的Linux命令都适用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">#可以看到当前安装的git的版本信息·</span><br></pre></td></tr></table></figure>
+
+<h3 id="Git的基本使用"><a href="#Git的基本使用" class="headerlink" title="Git的基本使用"></a>Git的基本使用</h3><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>现在总结一下今天学的两点内容：</p>
+<p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<ol>
+<li>使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</li>
+<li>使用命令<code>git commit -m &lt;message&gt;</code>，完成。</li>
+</ol>
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
+</li>
+<li><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
+</li>
+<li><p><code>git log</code>命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是<code>append GPL</code>，上一次是<code>add distributed</code>，最早的一次是<code>wrote a readme file</code>。</p>
+<p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数：</p>
+</li>
+</ul>
+<ul>
+<li><code>cat &lt;filename&gt;</code>在命令行窗口中打开你想要的文件</li>
+</ul>
+<h3 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h3><p>现在总结一下：</p>
+<ul>
+<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+<h3 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h3><p>现在总结一下：</p>
+<ul>
+<li><p>git diff比较的是工作目录中当前文件和暂存区域快照之间的差异， 也就是修改之后还没有暂存起来的变化内容。若要查看已暂存的将要添加到下次提交里的内容，可以用 git diff –cached 命令。</p>
+<p>请注意，git diff 本身只显示尚未暂存的改动，而不是自上次提交以来所做的所有改动。 所以有时候你一下子暂存了所有更新过的文件后，运行 git diff 后却什么也没有，就是这个原因。</p>
+</li>
+<li><p>暂存区是Git非常重要的概念，弄明白了暂存区，就弄明白了Git的很多操作到底干了什么。</p>
+</li>
+</ul>
+<h3 id="小结-4"><a href="#小结-4" class="headerlink" title="小结"></a>小结</h3><p>现在总结一下</p>
+<ul>
+<li>提交后，用<code>git diff HEAD -- readme.txt</code>命令可以查看工作区和版本库里面最新版本的区别：</li>
+<li>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中。</li>
+</ul>
+<h3 id="小结-5"><a href="#小结-5" class="headerlink" title="小结"></a>小结</h3><p>现在总结一下</p>
+<ul>
+<li><p>一种是<code>readme.txt</code>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
+<p>一种是<code>readme.txt</code>已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<p>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p>
+</li>
+<li><p><code>git checkout -- file</code>命令中的<code>--</code>很重要，没有<code>--</code>，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到<code>git checkout</code>命令。</p>
+</li>
+</ul>
+<h3 id="小结-6"><a href="#小结-6" class="headerlink" title="小结"></a>小结</h3><p>又到了小结时间。</p>
+<ul>
+<li><p>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+</li>
+<li><p>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+</li>
+<li><p>已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192" target="_blank" rel="noopener">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+</li>
+</ul>
+<h3 id="小结-7"><a href="#小结-7" class="headerlink" title="小结"></a>小结</h3><p>又到了小结时间</p>
+<ul>
+<li><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+</li>
+<li><p>一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用<code>rm</code>命令删了：</p>
+</li>
+<li><p>确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code>：</p>
+</li>
+<li><p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- test.txt</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="小结-8"><a href="#小结-8" class="headerlink" title="小结"></a>小结</h3><p>又到了小结时间</p>
+<ul>
+<li><p>如果一切顺利的话，可以在用户主目录里找到<code>.ssh</code>目录，里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，可以放心地告诉任何人。</p>
+</li>
+<li><p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
+</li>
+<li><p>当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。</p>
+</li>
+<li><p>最后友情提示，在GitHub上免费托管的Git仓库，任何人都可以看到喔（但只有你自己才能改）。所以，不要把敏感信息放进去。</p>
+</li>
+<li><p>如果你不想让别人看到Git库，有两个办法，一个是交点保护费，让GitHub把公开的仓库变成私有的，这样别人就看不见了（不可读更不可写）。另一个办法是自己动手，搭一个Git服务器，因为是你自己的Git服务器，所以别人也是看不见的。这个方法我们后面会讲到的，相当简单，公司内部开发必备。</p>
+</li>
+<li><p>确保你拥有一个GitHub账号后，我们就即将开始远程仓库的学习。</p>
+</li>
+</ul>
 
       
     </div>
@@ -535,8 +649,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -678,6 +801,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git与svn对比"><span class="nav-number">1.</span> <span class="nav-text">Git与svn对比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#svn"><span class="nav-number">1.1.</span> <span class="nav-text">svn</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git"><span class="nav-number">1.2.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git工作流程"><span class="nav-number">2.</span> <span class="nav-text">git工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的安装"><span class="nav-number">3.</span> <span class="nav-text">Git的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的基本使用"><span class="nav-number">4.</span> <span class="nav-text">Git的基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-1"><span class="nav-number">6.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-2"><span class="nav-number">7.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-3"><span class="nav-number">8.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-4"><span class="nav-number">9.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-5"><span class="nav-number">10.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-6"><span class="nav-number">11.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-7"><span class="nav-number">12.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-8"><span class="nav-number">13.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
